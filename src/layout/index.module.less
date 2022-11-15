@@ -1,0 +1,31 @@
+@scrollbarWidth: 8px;
+
+.layout {
+  position: relative;
+  height: 100vh;
+  background-color: #F5F6F8;
+  overflow: hidden;
+  .content {
+    flex: 1 1 auto;
+    padding: 2.4rem;
+    margin-left: 24rem;
+    height: 94vh;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: @scrollbarWidth;
+      /*高宽分别对应横竖滚动条的尺寸*/
+      height: 1px;
+    }
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面*/
+      border-radius: calc(@scrollbarWidth / 2);
+      background-color: fade(#000, 10%);
+    }
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      border-radius: calc(@scrollbarWidth / 2);
+      background-color: unset;
+    }
+  }
+}

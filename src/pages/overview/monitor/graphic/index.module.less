@@ -1,0 +1,40 @@
+
+.graphic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4.8rem 3rem ;
+  .grid {
+    padding: 0;
+  }
+  .info {
+    padding: 0 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #1D2129;
+  }
+  .label {
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+  }
+  .value {
+    display: flex;
+    align-items: flex-end;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+  .used {
+    font-size: 3.2rem;
+    line-height: 1;
+  }
+  .total {
+    margin-right: 4px;
+    margin-left: 4px;
+    &::before {
+      content: '/';
+      font-size: 1.6rem;
+    }
+  }
+}
