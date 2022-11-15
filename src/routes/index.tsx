@@ -7,34 +7,45 @@ import Overview, { Graphic, List } from '@pages/overview'
 import Algo from '@pages/algo'
 import Predict from '@pages/predict'
 
+// path 开头为 / 的为绝对路径，反之为相对路径
 const routes: RouteObject[] = [
   {
     path: '/',
+    element: <Navigate to='/explore' replace />
+  },
+  {
+    path: '/web',
+    element: <PageError />
+  },
+  {
+    path: '/',
     element: <Layout />,
-    children: [{
-      index: true,
-      // path: 'explore',
-      element: <Explore />,
-      // children: [
-      //   // { index: true, element: <Default /> },
-      //   { path: 'scene', element: <Scene /> },
-      // ]
-    }, {
-      path: 'scene', element: <Scene />
-    }, {
-      path: 'overview',
-      element: <Overview />,
-      children: [
-        { index: true, element: <Graphic /> },
-        { path: 'list', element: <List /> },
-      ]
-    }, {
-      path: 'algo',
-      element: <Algo />
-    }, {
-      path: 'predict',
-      element: <Predict />
-    }],
+    children: [
+      {
+        path: 'explore',
+        element: <Explore />,
+        children: [
+          { index: true, element: <Default /> },
+          { path: 'scene', element: <Scene /> },
+        ]
+      }, {
+        path: 'overview',
+        element: <Overview />,
+        children: [
+          { index: true, element: <Graphic /> },
+          { path: 'list', element: <List /> },
+        ]
+      }, {
+        path: 'algo',
+        element: <Algo />
+      }, {
+        path: 'predict',
+        element: <Predict />
+      }
+    ],
+  }, {
+    path: '/login',
+    element: <PageError />
   }, {
     path: '*',
     element: <PageError />

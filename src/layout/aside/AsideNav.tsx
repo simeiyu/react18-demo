@@ -14,7 +14,7 @@ interface MenuItem {
 }
 
 const items: MenuItem[] = [
-  { id: '/', label: '探索', icon: 'icon-tansuo1' },
+  { id: 'explore', label: '探索', icon: 'icon-tansuo1' },
   { id: 'overview', label: '概览', icon: 'icon-gailan1' },
   { id: 'predict', label: '应用开发', icon: 'icon-yingyongkaifa1' },
   { id: 'algo', label: '机器学习', icon: 'icon-jiqixuexi1' }

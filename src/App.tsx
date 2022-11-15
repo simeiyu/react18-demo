@@ -8,7 +8,7 @@ import Router from './routes'
 
 function App() {
   return (
-    <ConfigProvider locale={zhCN} renderEmpty={() => <CustomEmpty />} virtual>
+    <ConfigProvider locale={zhCN} renderEmpty={() => <CustomEmpty />}>
       <BrowserRouter>
         <Router />
       </BrowserRouter>

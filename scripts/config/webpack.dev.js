@@ -21,7 +21,7 @@ module.exports = merge(common, {
     compress: true,           // 设为true表示启用gzip压缩，加快网站打开速度
     open: true,               // 设为true表示第一次启动项目时自动打开默认浏览器
     hot: true,                // 设为true表示启用服务热替换配置
-    historyApiFallback: {
+    historyApiFallback: true || {
       index: path.resolve(PROJECT_PATH, './public/index.html')  // 当路由与真实文件不匹配时，webpack-dev-server 使用指定文件渲染而非 404 错误
     },
     // proxy: {
